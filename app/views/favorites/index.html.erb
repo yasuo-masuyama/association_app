@@ -1,0 +1,25 @@
+<h1>お気に入り一覧</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>name</th>
+      <th>Title</th>
+      <th>Content</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @favorites.each do |favorite| %>
+      <tr>
+        <td><%= favorite.user.name %></td>
+        <td><%= favorite.blog.title %></td>
+        <td><%= favorite.blog.content %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Blog', blogs_path %>
